@@ -1,0 +1,128 @@
+* {
+  font-family: 'Press Start 2P', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #202124;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  gap: 14px;
+  background-color: #5F9EA0;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+.title span {
+  animation: blinker 1.5s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+header {
+  display: flex;
+  align-items: stretch;
+}
+
+header,
+.main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 14px;
+}
+
+header input {
+  flex: 1;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+}
+
+header button {
+  border-radius: 14px;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #00008B;
+  color: white;
+}
+
+header button,
+header input {
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+  background: white;
+}
+
+p {
+  font-size: 0.9em;
+  text-transform: capitalize;
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background-color: white;
+  border: solid 3px black;
+}
+
+.todoItem p {
+  flex: 1;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon {
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.icon:hover {
+  opacity: 0.6;
+}
+
+
+@media (min-width: 640px) {
+
+  header button,
+  header input {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
